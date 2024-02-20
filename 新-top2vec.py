@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 11 21:00:49 2023
-
-@author: lenovo
-"""
-
 import pandas as pd
 from top2vec import Top2Vec
 from tqdm import tqdm
@@ -12,9 +5,8 @@ import umap
 import matplotlib.pyplot as plt
 
 # 读取Excel文件
-df = pd.read_excel('D:/pythonProject1/数据尝试/狗屎/新建文件夹/CI_total_no_empty_Confuciusinstitute.xlsx')  # 请替换 'your_news_data.xlsx' 为您的文件路径
+df = pd.read_excel('/CI_total_no_empty_Confuciusinstitute.xlsx')  
 
-# 将日期列转换为字符串格式（确保日期格式正确）
 
 # # 删除没有full article的行
 # df = df.dropna(subset=['content'])
@@ -50,7 +42,7 @@ with tqdm(total=num_topics, desc="Extracting Topics") as topic_pbar:
 
 
 # 保存模型到指定目录
-model.save('D:/pythonProject1/数据尝试/狗屎/新建文件夹/top2vector_model_xin.pkl')
+model.save('/top2vector_model_xin.pkl')
 
 # a = model.search_documents_by_topic(1, reduced=True)
 # print(a)
