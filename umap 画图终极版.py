@@ -7,7 +7,7 @@ from matplotlib.colors import ListedColormap, Normalize
 from tqdm import tqdm
 
 # Load the pre-trained Top2Vec model from file
-model = Top2Vec.load("D:/pythonProject1/数据尝试/狗屎/新建文件夹/top2vector_model_xin.pkl")
+model = Top2Vec.load("/top2vector_model_xin.pkl")
 
 # 获取主题的大小
 topic_sizes, _ = model.get_topic_sizes()
@@ -75,7 +75,7 @@ scatter = plt.scatter(
 
 # Add a colorbar to indicate different topics
 plt.colorbar(scatter, label='Topic')
-plt.savefig("D:/pythonProject1/数据尝试/狗屎/umap_visualization test.pdf", dpi=300, bbox_inches='tight')
+plt.savefig("/umap_visualization test.pdf", dpi=300, bbox_inches='tight')
 
 
 plt.show()
